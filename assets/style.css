@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* body {
+    font-family: ;
+    background: ;
+    color: ;
+} */
+
+
+/* ========== header ========== */
+
+/* .nav-link {
+    color: ;
+    font-size: ;
+    transition: all 1s ease-in-out;
+} */
+/* .nav-link:hover {
+    color: ;
+    cursor: pointer;
+} */
+/* .cart-info-icon {
+    color: ;
+    cursor: pointer;
+}
+.cart-info-icon:hover .cart-icon {
+    color: ;
+}
+.cart-info {
+    color: ;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: ;
+    cursor: pointer;
+}
+.cart-info:hover{
+    background-color: ;
+    border-color: ;
+    color: ;
+} */
