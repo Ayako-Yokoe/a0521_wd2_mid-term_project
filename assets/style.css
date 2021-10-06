@@ -12,6 +12,7 @@ a {
     font-family: ;
     background: ;
     color: ;
+    letter-spacing: ;
 } */
 
 
@@ -90,16 +91,16 @@ a {
 .cart {
     position: absolute;
     background-color: #fff;
-    top: 0; /*fix this */
-    right: 0; /* change this to negative */
-    transition: all 0.5s ease-in-out;
+    top: 0;
+    right: 0; /* fix here */
+    transition: right 0.5s ease-in-out;
     overflow: hidden;
     width: 40vw;
     padding: 10px;
 }
 /* .show-cart {
-    transform: right 0; /* check how to write */
-/* }  */
+    right: 0; check how to write 
+}  */
 
 .cart-item {
     display: flex;
@@ -107,6 +108,7 @@ a {
     justify-content: space-around;
     align-items: center;
     transition: all 0.5s ease-in-out;
+    padding: 15px;
 }
 .cart-item-img {
     width: 50px;
@@ -126,6 +128,7 @@ a {
     flex-direction: row;
     justify-content: space-evenly; /* change this */
     align-items: center;
+    padding: 15px;
 }
 
 /* .cart-item-price {
@@ -134,6 +137,7 @@ a {
 
 .cart-buttons-container {
     margin: 10px;
+    padding: 15px;
 }
 .clear-btn {
     border: 1px solid #000;
@@ -151,6 +155,139 @@ a {
     color: #000;  /* change this */
     /* btn bg-color + transition */
 }
+
+/* ========== gallery ========== */
+input {
+    background: none;
+    padding: 10px 16px;
+    border: none;
+    border-bottom: 1px solid #808080;
+    color: #f2f2f2;
+  }
+  
+  textarea:focus, input:focus {
+    outline: none;
+  }
+  
+  body {
+    font-family: "Rubik", sans-serif;
+  }
+  @media screen and (min-width: 780px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    color: #333333;
+    margin: 2px;
+  }
+  
+  p, a, li {
+    font-weight: lighter;
+    color: #333333;
+  }
+  
+  h2 {
+    font-size: 0.9em;
+  }
+  
+  h3 {
+    font-size: 0.8em;
+    /* defalut font size*1.1 */
+  }
+  
+  h4 {
+    font-size: 0.7em;
+  }
+  
+  h5 {
+    font-size: 0.8em;
+  }
+  
+  .gallery {
+    margin: 50px 0;
+    padding: 0 10%;
+  }
+  
+  .gallery-container-right-product img {
+    width: 100%;
+  }
+  
+  .gallery-container-right-product {
+    padding: 5px 15%;
+  }
+  
+  .gallery-container-right-card {
+    position: relative;
+    transform: all 0.5s;
+  }
+  .gallery-container-right-card:hover .card-overlay {
+    display: unset;
+    right: 0px;
+  }
+  .gallery-container-right-card .card-overlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    right: 100%;
+  }
+  .gallery-container-right-card .card-overlay-icons {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+  }
+  .gallery-container-right-card .card-overlay-icons .fas {
+    cursor: pointer;
+    font-size: larger;
+    margin: 0 3px;
+    color: #ffffff;
+  }
+  
+  .gallery-container {
+    width: 100%;
+    box-shadow: 5px 10px 18px #999999;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .gallery-container .gallery-container-left {
+    grid-column: 1/6;
+    padding: 0 5%;
+  }
+  .gallery-container .gallery-container-right {
+    grid-column: 6/13;
+    padding: 25px 3%;
+  }
+  
+  .gallery-container-right {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .gallery-container-right div:nth-child(1) {
+    grid-column: 1/7;
+    grid-row: 1/2;
+  }
+  .gallery-container-right div:nth-child(2) {
+    grid-column: 7/13;
+    grid-row: 1/2;
+  }
+  .gallery-container-right div:nth-child(3) {
+    grid-column: 1/7;
+    grid-row: 2/3;
+  }
+  .gallery-container-right div:nth-child(4) {
+    grid-column: 7/13;
+    grid-row: 2/3;
+  }
+  
+  .card-overlay i {
+    height: 10px;
+  }
+
 
 
 
@@ -290,6 +427,40 @@ input {
 
 
 /* ========== footer ========== */
+.footer {
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px 40px;
+}
+
+
+.footer-ul,
+.footer-ul-sns {
+    list-style: none;
+    padding: 0 30px;
+}
+
+.li-title {
+    list-style: none;
+    font-weight: 500;
+}
+
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer-info {
+    margin-right: 80px;
+}
 
 .footer-icon {
     color: #000;
@@ -298,4 +469,8 @@ input {
 }
 .footer-icon:hover {
     color: pink;
+}
+
+.right {
+    font-size: small;
 }
