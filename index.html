@@ -22,7 +22,8 @@
                     <i class="fas fa-bars"></i>
                 </span>
             </button> -->
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
+            <div class="nav-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="#header" class="nav-link">HOME</a>
@@ -37,30 +38,131 @@
                         <a href="#header" class="nav-link">CONTACS</a>
                     </li>
                 </ul>
-                <div class="nav-info-item">
-                    <!-- add search bar here ?-->
-                    <div id="cart-info" class="nav-info">
-                        <span class="cart-info-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </span>
-                        <p>
-                            <span id="item-count">2</span> items - $<span id="item-total">10.00</span>
-                        </p>
-                    </div>
-                </div>
             </div>
+            <!-- <div class="nav-info-item"> -->
+                    <!-- add search bar here ?-->
+
+                    <!-- search bar -->
+                    <!-- <form>
+                        <div class="search-bar">
+                            <div class="search-bar-icon">
+                                <span class="search-box" id="search-icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="search-form" id="search-item">
+                        </div>
+                    </form> -->
+                    <!-- /search bar -->
+
+            <div class="nav-info" id="cart-info">
+                <span class="nav-info-icon">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                </span>
+                <p>
+                    <span id="item-count">2</span> items - $<span id="item-total">10.00</span>
+                </p>
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
         </nav>
         <!-- /navbar -->
 
         <!-- hero -->
-        <div>
+        <div class="hero">
             <h2 class="hero-text">
                 This is a hero text
             </h2>
             <button type="button" class="hero-btn">items</button> <!-- if we need -->
-        </div>
         <!-- /hero -->
+
+        <!-- cart -->
+            <div class="cart" id="cart">
+                <!-- cart item -->
+                <div class="cart-item">
+                    <img src="/assets/images-cart/photo1.png" alt="" class="cart-item-img" id="cart-item-img">
+                    <div class="cart-item-text">
+                        <p class="cart-item-title">
+                            cart item
+                        </p>
+                        <span>$</span>
+                        <span class=" cart-item-price" id="cart-item-price">10.00</span>
+                    </div>
+                    <a href="#" class="cart-item-remove" id="cart-item-remove"></a>
+                    <i class="fas fa-trash"></i>
+                </div>
+                <div class="cart-item">
+                    <img src="/assets/images-cart/photo2.png" alt="" class="cart-item-img" id="cart-item-img">
+                    <div class="cart-item-text">
+                        <p class="cart-item-title">
+                            cart item
+                        </p>
+                        <span>$</span>
+                        <span class=" cart-item-price" id="cart-item-price">10.00</span>
+                    </div>
+                    <a href="#" class="cart-item-remove" id="cart-item-remove"></a>
+                    <i class="fas fa-trash"></i>
+                </div>
+                <!-- /cart item -->
+                <!-- cart total -->
+                <div class="cart-total-container">
+                    <p>TOTAL</p>
+                    <p>$ <strong id="cart-total">20.00</strong></p>
+                </div>
+                <!-- /cart total -->
+                <!-- cart buttons -->
+                <div class="cart-buttons-container">
+                    <a href="#" class="clear-btn" id="clear-btn">Clear Cart</a>
+                    <a href="#" class="checkout-btn" id="checkout-btn">Checkout</a>
+                </div>
+                <!-- /cart buttons -->
+            </div>
+        </div>
+        <!-- /cart -->
+
     </header>
     <!-- /header -->
+
+    <!-- about us ?? -->
+    <!-- /about us ?? -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <ul class="footer-ul">
+                <li><div class="li-title">Buy</div></li>
+                <li class="footer=li">all</li>
+                <li class="footer=li">category1</li>
+                <li class="footer=li"> category2</li>
+            </ul>
+            <ul class="footer-ul">
+                <li><div class="li-title">Help</div></li>
+                <li class="footer=li">FAQ</li>
+                <li class="footer=li">Terms & Policies</li>
+                <li class="footer=li">Returns Policy</li>
+            </ul>
+            <ul class="footer-ul">
+                <li><div class="li-title">About Us</div></li>
+                <li class="footer=li">About us</li>
+                <li class="footer=li">Stuff Blog</li>
+                <li class="footer=li">Contact us</li>
+            </ul>
+            <ul class="footer-ul-sns">
+                <li><div class="li-title">Follow Us</div></li>
+                <li><a href="#"><i class="fab fa-facebook footer-icon"></i>Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter footer-icon"></i>Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram footer-icon"></i>Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <h2 class="footer-store-name">store name</h2>
+            <p class="footer-tel">(555)555-5555</p>
+        </div>
+        <div class="right">
+            <p class="copyright">&copy; 2021 StoreName All Rights reserved</p>
+        </div>
+    </footer>
+    <!-- /footer -->
+
 </body>
 </html>
