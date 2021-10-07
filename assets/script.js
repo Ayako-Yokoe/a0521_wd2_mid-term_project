@@ -28,7 +28,7 @@ function addToCart() {
                 item.price = finalPrice
 
                 const cartItem = document.createElement('div')
-                cartItem.classList.add('cart-item', 'd-flex', 'justify-content-between', 'text-capitalize', 'my-3') // *4
+                cartItem.classList.add('cart-item') // *4
 
                 cartItem.innerHTML = `
                 <img src="${item.img}" alt="">
@@ -51,6 +51,9 @@ function addToCart() {
             }
         })
     })
+
+    addToCart()
+
     // show totals
     function showTotals(){
         const total = []
@@ -71,3 +74,5 @@ function addToCart() {
 
     }
 }
+
+showTotals()

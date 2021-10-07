@@ -3,27 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 a {
     text-decoration: none;
 }
-
-/* body {
-    font-family: ;
-    background: ;
-    color: ;
-    letter-spacing: ;
-} */
-
-
+body {
+    /* font-family: ; */
+    /* background: ; */
+    color: #333333;
+    letter-spacing: 1px;
+}
 /* ========== header ========== */
 
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-content: center;
-    padding: 30px 10px 20px 10px;
+    align-items: center;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+}
+.nav-menu {
+    align-items: center;
 }
 .navbar-nav {
     display: flex;
@@ -62,15 +64,28 @@ a {
 .nav-info-icon:hover .cart-icon {
     color: #fff; /* change this */
 }
-
 .nav-info:hover{
     background-color: red; /* change this */
     border-color: red; /* change this */
     color: #fff; /* change this */
 }
+.search-bar {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+.search-box-icon {
+    padding: 15px 5px 5px 5px;
+}
+.search-icon {
+    width: 80px;
+    height: 80px;
+}
+.search-form {
+    border-bottom: none;
+}
 
 .hero {
-    height: 80vh;
+    height: 50vh;
     background-color: lightpink;  /* placeholder */
     /* background: url() no-repeat center/center cover;
     background-attachment: fixed;  optional
@@ -83,7 +98,9 @@ a {
 .hero-text {
     color: #fff;  /* change this */
     font-weight: 400;
-    /* font-size: ; */
+    font-size: 30px; 
+    padding-top: 30px;
+    letter-spacing: 3px;
 }
 
 /* ========== cart ========== */
@@ -98,9 +115,9 @@ a {
     width: 40vw;
     padding: 10px;
 }
-/* .show-cart {
-    right: 0; check how to write 
-}  */
+.show-cart {
+    right: 0;
+} 
 
 .cart-item {
     display: flex;
@@ -130,6 +147,9 @@ a {
     align-items: center;
     padding: 15px;
 }
+.cart-item-title {
+    padding: 10px;
+}
 
 /* .cart-item-price {
     font-size: ;
@@ -147,7 +167,6 @@ a {
     color: #000;  /* change this */
     /* btn bg-color + transition */
 }
-
 .checkout-btn {
     border: 1px solid #000;
     border-radius: 5px;
@@ -283,14 +302,9 @@ input {
     grid-column: 7/13;
     grid-row: 2/3;
   }
-  
   .card-overlay i {
     height: 10px;
   }
-
-
-
-
 /* ========== gallery ========== */
 input {
     background: none;
@@ -299,11 +313,9 @@ input {
     border-bottom: 1px solid #808080;
     color: #f2f2f2;
   }
-  
   textarea:focus, input:focus {
     outline: none;
   }
-  
   body {
     font-family: "Rubik", sans-serif;
   }
@@ -312,48 +324,38 @@ input {
       font-size: 18px;
     }
   }
-  
   h1, h2, h3, h4, h5 {
     font-weight: normal;
     color: #333333;
     margin: 2px;
   }
-  
   p, a, li {
     font-weight: lighter;
     color: #333333;
   }
-  
   h2 {
     font-size: 0.9em;
   }
-  
   h3 {
     font-size: 0.8em;
     /* defalut font size*1.1 */
   }
-  
   h4 {
     font-size: 0.7em;
   }
-  
   h5 {
     font-size: 0.8em;
   }
-  
   .gallery {
     margin: 50px 0;
     padding: 0 10%;
   }
-  
   .gallery-container-right-product img {
     width: 100%;
   }
-  
   .gallery-container-right-product {
     padding: 5px 15%;
   }
-  
   .gallery-container-right-card {
     position: relative;
     transform: all 0.5s;
@@ -381,7 +383,6 @@ input {
     margin: 0 3px;
     color: #ffffff;
   }
-  
   .gallery-container {
     width: 100%;
     box-shadow: 5px 10px 18px #999999;
@@ -396,7 +397,6 @@ input {
     grid-column: 6/13;
     padding: 25px 3%;
   }
-  
   .gallery-container-right {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -418,19 +418,13 @@ input {
     grid-column: 7/13;
     grid-row: 2/3;
   }
-  
   .card-overlay i {
     height: 10px;
   }
-
-
-
-
 /* ========== footer ========== */
 .footer {
     margin-bottom: 30px;
 }
-
 .footer-links {
     display: flex;
     flex-direction: row;
@@ -438,20 +432,19 @@ input {
     align-items: flex-start;
     margin: 10px 40px;
 }
-
-
 .footer-ul,
 .footer-ul-sns {
     list-style: none;
     padding: 0 30px;
 }
-
 .li-title {
     list-style: none;
     font-weight: 500;
 }
-
-
+.footer-li,
+.li-title {
+    padding: 3px;
+}
 .footer-bottom {
     display: flex;
     flex-direction: row;
@@ -461,7 +454,6 @@ input {
 .footer-info {
     margin-right: 80px;
 }
-
 .footer-icon {
     color: #000;
     margin: 10px;
@@ -470,7 +462,6 @@ input {
 .footer-icon:hover {
     color: pink;
 }
-
 .right {
     font-size: small;
 }
