@@ -12,38 +12,20 @@ const cartBtn = document.querySelectorAll('.store-item-icon')
 cartBtn.forEach(function(btn){
     btn.addEventListener('click', function(event){
         if(event.target.parentElement.classList.contains('store-item-icon')){ 
-
-            console.log(event.target.parentElement.parentElement.parentElement.nextElementSibling.src)
-
             let path = event.target.parentElement.parentElement.parentElement.nextElementSibling.src 
-
             let position = path.indexOf('images') + 6
-
-            console.log(position)
-
             let partialPath = path.slice(position)
-
-            console.log(partialPath)
-
 
             const item = {}
             item.img = `images-cart${partialPath}`
 
-            console.log(item)
-
             let name = event.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling.textContent      
-
-            console.log(name)
-
             item.name = name
 
             let price = event.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling
             .nextElementSibling.nextElementSibling.textContent
             let finalPrice = price.slice(1).trim()
             item.price = finalPrice
-
-            console.log(finalPrice)
-            console.log(item)
 
             const cartItem = document.createElement('div')
             cartItem.classList.add('cart-item')
@@ -67,45 +49,23 @@ cartBtn.forEach(function(btn){
             cart.insertBefore(cartItem, total)
             alert('item added to the cart')
 
-            //const total = []
-            // const items = document.querySelectorAll('.cart-item-price')
+            const totalArray = []
+            const items = document.querySelectorAll('.cart-item-price')
     
+            items.forEach(function(item){
+                totalArray.push(parseFloat(item.textContent))
+            })
 
-            // items.forEach(function(item){
-            //     total.push(parseFloat(item.textContent))
-            // })
-            // const totalMoney = total.reduce(function(total, item) {
-            //     total += item
-            //     return total
-            // }, 0)
-            // const finalMoney = totalMoney.toFixed(2)
-    
-            // document.getElementById('cart-total').textContent = finalMoney
-            // document.getElementsByClassName('.item-total').textContent = finalMoney
-            // document.getElementById('item-count').textContent = total.length
+            var totalMoney = 0
+            for(let i = 0; i < totalArray.length; i++){
+                totalMoney += totalArray[i]
+            }
+
+            document.getElementById('cart-total').textContent = totalMoney
+            document.getElementById('item-total').textContent = totalMoney
+            document.getElementById('item-count').textContent = totalArray.length
         }
     })
-
 })
 
-    // show totals
-//     function showTotals(){
-//         const total = []
-//         const items = document.querySelectorAll('.cart-item-price')
-
-//         items.forEach(function(item){
-//             total.push(parseFloat(item.textContent))
-//         })
-//         const totalMoney = total.reduce(function(total, item) {
-//             total += item
-//             return total
-//         }, 0)
-//         const finalMoney = totalMoney.toFixed(2)
-
-//         document.getElementById('cart-total').textContent = finalMoney
-//         document.getElementsByClassName('.item-total').textContent = finalMoney
-//         document.getElementById('item-count').textContent = total.length
-
-//     }
-// })
 

@@ -109,10 +109,10 @@ body {
     position: absolute;
     background-color: #fff;
     top: 0;
-    right: -40vw; /* fix here */
+    right: -50vw; /* fix here */
     transition: right 0.5s ease-in-out;
     overflow: hidden;
-    width: 40vw;
+    width: 50vw;
     padding: 10px;
     z-index: 20;
 }
