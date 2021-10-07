@@ -114,6 +114,7 @@ body {
     overflow: hidden;
     width: 40vw;
     padding: 10px;
+    z-index: 20;
 }
 .show-cart {
     right: 0;
