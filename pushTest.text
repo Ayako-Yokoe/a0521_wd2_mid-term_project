@@ -1,0 +1,28 @@
+<div class="cart-item">
+    <img src="/assets/images-cart/photo1.png" alt="" class="cart-item-img" id="cart-item-img">
+    <div class="cart-item-text">
+        <p class="cart-item-title">
+            cart item
+        </p>
+        <span>$</span>
+        <span class=" cart-item-price" id="cart-item-price">10.00</span>
+    </div>
+
+    <a href="#" class="cart-item-remove" id="cart-item-remove"></a>
+    <i class="fas fa-trash"></i>
+</div>
+
+
+
+<div class="cart-item">
+    <img src="${item.img}" alt="" class="cart-item-img" id="cart-item-img">
+    <div class="cart-item-text like-item-text">
+        <p class="cart-item-title">
+            ${item.name}
+        </p>         
+    </div>
+            
+    <a href="#" class="cart-item-remove" id="cart-item-remove"></a>
+            
+    <i class="fas fa-trash"></i>
+</div>
