@@ -22,12 +22,14 @@
                 
                 // === to get img path === 
                 let fullPath = event.target.parentElement.parentElement.parentElement.nextElementSibling.src;
-                let pos=fullPath.indexOf("images");  
-                let partPath =fullPath.slice(pos+6);
+                let pos=fullPath.indexOf("gallery");  
+                let partPath =fullPath.slice(pos+7);
      
                
                 const item ={};
-                item.img=` http://127.0.0.1:5500/assets/images${partPath}`;
+                item.img=`images-cart${partPath}`;
+
+                console.log(item)
 
 
                 let name= event.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].textContent; //MINI CANELE Minin Kelly
