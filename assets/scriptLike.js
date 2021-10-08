@@ -27,9 +27,9 @@
      
                
                 const item ={};
-                item.img=` http://127.0.0.1:5500/assets/images-cart${partPath}`;
+                item.img=` http://127.0.0.1:5500/assets/images${partPath}`;
 
-          
+
                 let name= event.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].textContent; //MINI CANELE Minin Kelly
                 item.name=name;
 
@@ -37,9 +37,6 @@
                 let price = event.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[3].textContent;
                 let finalPrice =price.slice(1).trim(); 
                 item.price=finalPrice;
-
-                console.log(item);
-
 
 
                 const likeItem = document.createElement('div');
@@ -51,7 +48,7 @@
 
                 likeItem.innerHTML=`
                     
-                    <img src="${item.img}" alt="" class="cart-item-img" id="cart-item-img">
+                    <img src="/assets/${item.img}" alt="" class="cart-item-img" id="cart-item-img">
                     <div class="cart-item-text like-item-text">
                         <p class="cart-item-title">
                             ${item.name}
@@ -62,7 +59,6 @@
                     <i class="fas fa-trash"></i>
             
                 `
-
              
                 const likeDtails=document.getElementById('likeDtails');
                 const totalLike=document.querySelector('.cart-buttons-container');
