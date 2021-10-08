@@ -5,6 +5,25 @@ cartInfo.addEventListener('click', function() {
     cart.classList.toggle('show-cart')
 })
 
+// show totals
+function showTotals(){
+    const totalArray = []
+    const items = document.querySelectorAll('.cart-item-price')
+
+    items.forEach(function(item){
+        totalArray.push(parseFloat(item.textContent))
+    })
+
+    var totalMoney = 0
+    for(let i = 0; i < totalArray.length; i++){
+        totalMoney += totalArray[i]
+    }
+
+    document.getElementById('cart-total').textContent = totalMoney
+    document.getElementById('item-total').textContent = totalMoney
+    document.getElementById('item-count').textContent = totalArray.length
+}
+
 
 // add to cart
 const cartBtn = document.querySelectorAll('.store-item-icon')
@@ -37,11 +56,10 @@ cartBtn.forEach(function(btn){
                 <span>$</span>
                 <span id="cart-item-price" class="cart-item-price">${item.price}</span>
             </div>
-            <a href="#" id='cart-item-remove' class="cart-item-remove">
-                <i class="fas fa-trash"></i>
-            </a>
-            </div>
+            <a href="#" class="cart-item-remove" id="cart-item-remove"></a>
+            <i class="fas fa-trash"></i>
             `
+
             // select cart
             const cart = document.getElementById('cart')
             const total = document.querySelector('.cart-total-container')
@@ -49,21 +67,36 @@ cartBtn.forEach(function(btn){
             cart.insertBefore(cartItem, total)
             alert('item added to the cart')
 
-            const totalArray = []
-            const items = document.querySelectorAll('.cart-item-price')
-    
-            items.forEach(function(item){
-                totalArray.push(parseFloat(item.textContent))
-            })
-
-            var totalMoney = 0
-            for(let i = 0; i < totalArray.length; i++){
-                totalMoney += totalArray[i]
-            }
-
-            document.getElementById('cart-total').textContent = totalMoney
-            document.getElementById('item-total').textContent = totalMoney
-            document.getElementById('item-count').textContent = totalArray.length
+            showTotals()
         }
     })
+
+
+// clear items
+
+const cartDetails = document.getElementById('cart');
+cartDetails.addEventListener('click',function(event){
+
+    if(event.target.classList.contains('fa-trash')){    
+      
+        const dying = event.target.parentElement;
+        dying.parentElement.removeChild(dying);  //
+
+        console.log(dying.parentElement)
+        
+
+    }else if(event.target.classList.contains('clear-btn')){         
+    
+        const parent = event.target.parentElement.parentElement;
+      
+        while(parent.firstElementChild.classList[0]==="cart-item"){
+            console.log(parent.firstElementChild.classList[0]==="cart-item");
+            parent.removeChild(parent.firstElementChild);
+        }      
+    } 
+    showTotals();  
+    
+    })
+
 })
+
