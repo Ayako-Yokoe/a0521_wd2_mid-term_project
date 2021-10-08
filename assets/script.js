@@ -99,3 +99,4 @@ cartDetails.addEventListener('click',function(event){
     })
 
 })
+

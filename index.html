@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MONSTERA</title>
     <link rel="stylesheet" href="/assets/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-
 </head>
 <body>
     <!-- header -->
@@ -15,22 +14,15 @@
         <!-- navbar -->
         <nav class="navbar">
             <a href="#">
-                <img class="logo" src="/assets/images-logo/logo.png" alt=""> <!-- logo -->
+                <img src="/assets/images-logo/logo.png" alt="" class="logo">
             </a>
-            <!-- hamburger menu
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
-                <span toggler-icon>
-                    <i class="fas fa-bars"></i>
-                </span>
-            </button> -->
-            <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
             <div class="nav-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="#header" class="nav-link">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#header" class="nav-link">ABOUT</a> <!-- up-date titels and links -->
+                        <a href="#header" class="nav-link">ABOUT</a>
                     </li>
                     <li class="nav-item">
                         <a href="#header" class="nav-link">ITEMS</a>
@@ -40,23 +32,20 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="nav-info-item"> -->
                    
             <!-- search bar -->
             <form>
                 <div class="search-bar">
-                    <div class="search-bar-icon">
-                        <span class="search-box" id="search-icon">
-                            <i class="fas fa-search"></i>
+                        <span class="search-box-icon" id="search-icon">
+                            <i class="fas fa-search" class="search-icon" ></i>
                         </span>
-                    </div>
-                    <input type="text" class="search-form" id="search-item">
+                    <input type="text" class="search-form" id="search-item" placeholder="Search...">
                 </div>
             </form>
             <!-- /search bar -->
 
-            <!-- like  -->
-            <div class="nav-info" id="seeLike">
+              <!-- like  -->
+              <div class="nav-info" id="seeLike">
                 <span class="nav-info-icon">
                     <i class="fas fa-heart"></i> 
                 </span>
@@ -66,67 +55,60 @@
             </div>
             <!-- /like -->
 
-             <!-- cart  -->
             <div class="nav-info" id="cart-info">
                 <span class="nav-info-icon">
                     <i class="fas fa-shopping-cart cart-icon"></i>
                 </span>
                 <p>
-                    <span id="item-count">0</span> items - $<span id="item-total">0.00</span>
+                    <span id="item-count"></span> items - $<span id="item-total"></span>
                 </p>
             </div>
-            <!-- cart  -->
 
-           
         </nav>
         <!-- /navbar -->
 
-    <!-- hero 
+        <!-- hero -->
         <div class="hero">
             <h2 class="hero-text">
-                This is a hero text
+                Welcome
             </h2>
-            <button type="button" class="hero-btn">items</button>  
-        </div>
-    /hero -->
+        <!-- /hero -->
 
-            <!-- like details -->
-            <div class="like" id="likeDtails">
-                <!-- cart(like) item (default) -->
-                <div class="cart-item like-item">
-                    <img src="/assets/images-cart/p1.png" alt="" class="cart-item-img" id="cart-item-img">
-                    <div class="cart-item-text like-item-text">
-                        <p class="cart-item-title">
-                            MINI CANELE Minin Kelly
-                        </p>
-                    </div>
-
-                    <!-- <span class="add-to-cart-from-like-btn">
-                        <i class="fas fa-cart-arrow-down"></i>
-                    </span> -->
-
-                    <!-- <a href="#" class="cart-item-remove" id="cart-item-remove"></a> -->
-                    <i class="fas fa-trash"></i>   
-                    
-                   
+    <!-- like details -->
+        <div class="like" id="likeDtails">
+            <!-- cart(like) item (default) -->
+            <div class="cart-item like-item">
+                <img src="/assets/images-cart/p1.png" alt="" class="cart-item-img" id="cart-item-img">
+                <div class="cart-item-text like-item-text">
+                    <p class="cart-item-title">
+                        MINI CANELE Minin Kelly
+                    </p>
                 </div>
-                <!-- end of cart(like)  item -->
 
-                <!-- cart buttons -->
-                <div class="cart-buttons-container ">
-                    <a href="#" class="clear-btn" id="clear-btn">Clear Cart</a>
-                    <a href="#" class="checkout-btn" id="checkout-btn">Checkout</a>
-                </div>
-                <!-- /cart buttons -->
+                <!-- <span class="add-to-cart-from-like-btn">
+                    <i class="fas fa-cart-arrow-down"></i>
+                </span> -->
+
+                <!-- <a href="#" class="cart-item-remove" id="cart-item-remove"></a> -->
+                <i class="fas fa-trash"></i>   
+                
+               
             </div>
-        
-        <!-- /like details -->
+            <!-- end of cart(like)  item -->
 
-            
+            <!-- cart buttons -->
+            <div class="cart-buttons-container ">
+                <a href="#" class="clear-btn" id="clear-btn">Clear Cart</a>
+                <a href="#" class="checkout-btn" id="checkout-btn">Checkout</a>
+            </div>
+            <!-- /cart buttons -->
+        </div>
+    <!-- end of like details -->
+
         <!-- cart -->
             <div class="cart" id="cart">
-            <!-- cart item (default)
-                <div class="cart-item">
+                <!-- cart item -->
+                <!-- <div class="cart-item">
                     <img src="/assets/images-cart/p1.png" alt="" class="cart-item-img" id="cart-item-img">
                     <div class="cart-item-text">
                         <p class="cart-item-title">
@@ -138,17 +120,25 @@
                     <a href="#" class="cart-item-remove" id="cart-item-remove"></a>
                     <i class="fas fa-trash"></i>
                 </div>
-
-            end of cart item -->
-
-
+                <div class="cart-item">
+                    <img src="/assets/images-cart/p2.png" alt="" class="cart-item-img" id="cart-item-img">
+                    <div class="cart-item-text">
+                        <p class="cart-item-title">
+                            cart item
+                        </p>
+                        <span>$</span>
+                        <span class=" cart-item-price" id="cart-item-price">10.00</span>
+                    </div>
+                    <a href="#" class="cart-item-remove" id="cart-item-remove"></a>
+                    <i class="fas fa-trash"></i>
+                </div> -->
+                <!-- /cart item -->
                 <!-- cart total -->
                 <div class="cart-total-container">
                     <p>TOTAL</p>
-                    <p>$ <strong id="cart-total"> 0 </strong></p>
+                    <p>$ <strong id="cart-total"></strong></p>
                 </div>
                 <!-- /cart total -->
-                
                 <!-- cart buttons -->
                 <div class="cart-buttons-container">
                     <a href="#" class="clear-btn" id="clear-btn">Clear Cart</a>
@@ -159,21 +149,14 @@
         </div>
         <!-- /cart -->
 
-
-
     </header>
     <!-- /header -->
-
-    <!-- about us ?? -->
-    <!-- /about us ?? -->
-
-
 
      <!--Gallery-->
      <section class="gallery">
         <div class="gallery-container">
             <div class="gallery-container-left">
-                <img class="gallery-container-left-img" src="/assets/images-gallery/p.png" alt="">
+                <img class="gallery-container-left-img" src="/assets/images/p.png" alt="">
 
             </div>
 
@@ -182,18 +165,18 @@
 
                     <div class="gallery-container-right-card">
                         <div class="card-overlay">
-                            <div class="card-overlay-icons">      
+                            <div class="card-overlay-icons"> 
                                 <span class="card-overlay-icons-like">
                                     <i class="fas fa-heart"></i> 
-                                </span>
-                                <span class="card-overlay-icons-cart">
+                                </span>    
+                               
+                                <span class="store-item-icon">
                                     <i class="fas fa-shopping-cart"></i>
                                 </span>
-                                
                             </div>
                         </div>
 
-                        <img class="gallery-container-right-1-1-img" src="/assets/images-gallery/p1.png" alt="">        
+                        <img class="gallery-container-right-1-1-img" src="/assets/images/p1.png" alt="">  
                     </div>
 
 
@@ -207,18 +190,17 @@
                 <div class="gallery-container-right-product gallery-container-right-1-2">
                     <div class="gallery-container-right-card">
                         <div class="card-overlay">
-                            <div class="card-overlay-icons">      
+                            <div class="card-overlay-icons">
                                 <span class="card-overlay-icons-like">
                                     <i class="fas fa-heart"></i> 
-                                </span>
-                                <span class="card-overlay-icons-cart">
+                                </span>   
+                                <span class="store-item-icon">
                                     <i class="fas fa-shopping-cart"></i>
                                 </span>
-                                
                             </div>
                         </div>
-                        <img class="gallery-container-right-1-1-img" src="/assets/images-gallery/p2.png" alt="">        
-                   
+
+                        <img class="gallery-container-right-2-1-img" src="/assets/images/p2.png" alt="">   
                     </div>
                    
                     <h3>CANELE French Kelly</h3>
@@ -229,18 +211,17 @@
                 <div class="gallery-container-right-product gallery-container-right-2-1">
                     <div class="gallery-container-right-card">
                         <div class="card-overlay">
-                            <div class="card-overlay-icons">      
+                            <div class="card-overlay-icons">
                                 <span class="card-overlay-icons-like">
                                     <i class="fas fa-heart"></i> 
-                                </span>
-                                <span class="card-overlay-icons-cart">
+                                </span>   
+                                <span class="store-item-icon">
                                     <i class="fas fa-shopping-cart"></i>
                                 </span>
-                                
                             </div>
                         </div>
 
-                        <img class="gallery-container-right-2-1-img" src="/assets/images-gallery/p3.png" alt="">       
+                        <img class="gallery-container-right-2-1-img" src="/assets/images/p3.png" alt="">       
 
                     </div>
                     
@@ -252,18 +233,17 @@
                 <div class="gallery-container-right-product gallery-container-right-2-2">
                     <div class="gallery-container-right-card">
                         <div class="card-overlay">
-                            <div class="card-overlay-icons">      
+                            <div class="card-overlay-icons">
                                 <span class="card-overlay-icons-like">
                                     <i class="fas fa-heart"></i> 
-                                </span>
-                                <span class="card-overlay-icons-cart">
+                                </span>   
+                                <span class="store-item-icon">
                                     <i class="fas fa-shopping-cart"></i>
                                 </span>
-                                
                             </div>
                         </div>
 
-                        <img class="gallery-container-right-2-2-img" src="/assets/images-gallery/p4.png" alt="">      
+                        <img class="gallery-container-right-2-2-img" src="/assets/images/p4.png" alt="">      
 
                     </div>
                     
@@ -307,7 +287,7 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-info">
-                <h2 class="footer-store-name">store name</h2>
+                <h2 class="footer-store-name">monstera</h2>
                 <p class="footer-tel">(555)555-5555</p>
             </div>
             <div class="right">
@@ -317,10 +297,8 @@
     </footer>
     <!-- /footer -->
 
+    <script src="assets/script.js"></script>
     <script src="/assets/scriptLike.js"></script>
     <script src="/assets/scriptSearch.js"></script>
-    <script src="/assets/scriptCart.js"></script>
-    <script src="/assets/scriptLikeToCart.js"></script>
-
 </body>
 </html>
