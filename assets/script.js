@@ -32,7 +32,7 @@ cartBtn.forEach(function(btn){
     btn.addEventListener('click', function(event){
         if(event.target.parentElement.classList.contains('store-item-icon')){ 
             let path = event.target.parentElement.parentElement.parentElement.nextElementSibling.src 
-            let position = path.indexOf('images') + 6
+            let position = path.indexOf('gallery') + 7
             let partialPath = path.slice(position)
 
             const item = {}
