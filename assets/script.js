@@ -98,4 +98,9 @@ cartDetails.addEventListener('click',function(event){
     
     })
 
+<<<<<<< HEAD
 })
+=======
+})
+
+>>>>>>> c9e6d1478ac244392aa3af3e2ddf3814051b3747
